@@ -1,0 +1,35 @@
+.App {
+  background-color: $offwhite;
+  text-align: center;
+
+  header {
+    @include l-flex();
+    @include l-center();
+    @include l-center-justified();
+    background-color: $tan;
+    box-sizing: border-box;
+    padding: 35px 20px 30px 20px;
+    border-bottom: 5px solid $green;
+  }
+
+  .logo {
+    height: 74px;
+    width: 290px;
+  }
+
+  nav ul li {
+    box-sizing: border-box;
+    display: inline;
+    margin-right: 25px;
+    padding: 10px 0;
+    a {
+      color: $green;
+      font-family: $cabin;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: .25px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.product {
+  @include l-flex();
+  @include l-vertical();
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 750px;
+  padding: 50px 20px;
+
+  @media (min-width: 768px) {
+    @include l-horizontal();
+  }
+
+  .media {
+    @include l-flex();
+    @include l-center();
+    @include l-center-justified();
+    @include l-vertical();
+    border-bottom: 2px solid $green;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+
+    @media (min-width: 768px) {
+      border-bottom: 0;
+      padding-bottom: 0;
+      padding-right: 20px;
+    }
+
+
+    img {
+      border: 1px solid $green;
+      width: 200px;
+
+      @media (min-width: 768px) {
+        height: 200px;
+        width: auto;
+      }
+    }
+
+
+    h3 {
+      font: $cabin;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  .content {
+    @include l-flex();
+    @include l-flex-auto();
+    @include l-start();
+    @include l-vertical();
+    box-sizing: border-box;
+    padding-top: 20px;
+    text-align: left;
+
+    @media (min-width: 768px) {
+      padding-left: 20px;
+      padding-top: 0;
+    }
+
+    h1 {
+      color: $green;
+      font: $roboto;
+      font-size: 22px;
+      font-weight: 700;
+      margin-top: -3px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font: $cabin;
+      font-size: 14px;
+      margin-top: -5px;
+    }
+
+    button {
+      @include l-flex();
+      @include l-self-end();
+      background-color: $green;
+      border: 0;
+      color: $tan;
+      cursor: pointer;
+      font: $roboto;
+      font-size: 18px;
+      font-weight: 400;
+      margin-top: 35px;
+      outline: 0;
+      padding: 10px;
+      text-transform: uppercase;
+    }
+  };
+}
+
+.product:nth-child(even) {
+  background-color: $green;
+  color: $tan;
+
+  .media {
+    img { border: 1px solid $tan; }
+    border-bottom: 2px solid $tan;
+    @media (min-width: 768px) { border-bottom: 0; }
+  }
+
+  .content {
+    h1 { color: $tan; }
+    button {
+      background-color: $tan;
+      color: $green;
+    }
+  }
+}
