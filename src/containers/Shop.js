@@ -11,15 +11,50 @@ import Product from '../components/Product';
 // );
 
 class Shop extends Component {
+  state = {
+    items: this.props.items,
+  };
+
+  filterCategory(category) {
+    const { items } = this.props;
+    const filteredCategory =
+      category === 'All' ? items : items.filter(item => item.category === category);
+    this.setState({ items: filteredCategory });
+  }
+
   render() {
-    const { items, add } = this.props;
-    const shampoo = items.filter(item => item.category === 'shampoo')
+    const { items } = this.state;
+    const { add } = this.props;
+
     return (
-      <div>
-        {shampoo.map((item, index) => {
-          return <Product key={index} item={item} add={add} />;
-        })}
-      </div>
+      <section>
+        <nav>
+          <span className="category-link" onClick={() => this.filterCategory('All')}>
+            ALL
+          </span>{' '}
+          |{' '}
+          <span className="category-link" onClick={() => this.filterCategory('Pins')}>
+            Pins
+          </span>{' '}
+          |{' '}
+          <span className="category-link" onClick={() => this.filterCategory('board-games')}>
+            Board Games
+          </span>{' '}
+          |{' '}
+          <span className="category-link" onClick={() => this.filterCategory('diy-tech')}>
+            DIY tech
+          </span>{' '}
+          |{' '}
+          <span className="category-link" onClick={() => this.filterCategory('graphic-novel')}>
+            Graphic Novels
+          </span>
+        </nav>
+        <div>
+          {items.map((item, index) => {
+            return <Product key={index} item={item} add={add} />;
+          })}
+        </div>
+      </section>
     );
   }
 }

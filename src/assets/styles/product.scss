@@ -5,9 +5,25 @@
   margin: 0 auto;
   max-width: 750px;
   padding: 50px 20px;
+  position: relative;
+  overflow: hidden;
 
   @media (min-width: 768px) {
     @include l-horizontal();
+  }
+
+  &-tooltip {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: $offwhite;
+    color: $green;
+    font-weight: 700;
+    border: 1px solid $green;
+    padding: 20px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(10vh);
   }
 
   .media {
@@ -87,6 +103,12 @@
       outline: 0;
       padding: 10px;
       text-transform: uppercase;
+      transition: all 0.3s ease-in;
+
+      &[disabled] {
+        cursor: default;
+        opacity: 0.75;
+      }
     }
   };
 }
@@ -108,4 +130,8 @@
       color: $green;
     }
   }
+}
+
+.category-link {
+  cursor: pointer;
 }

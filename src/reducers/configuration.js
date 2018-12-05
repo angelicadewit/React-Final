@@ -1,168 +1,230 @@
 import { ADD_ITEM, REMOVE_ITEM } from '../actions';
 
-import bourbonSoap from '../assets/images/products/bourbon-soap.webp';
-import leafSoap from '../assets/images/products/leaf-soap.webp';
-import pineSoap from '../assets/images/products/pine-soap.webp';
-import victorySoap from '../assets/images/products/victory-soap.webp';
-import airCologne from '../assets/images/products/air-cologne.webp';
-import bourbonCologne from '../assets/images/products/bourbon-cologne.webp';
-import landCologne from '../assets/images/products/land-cologne.webp';
-import seaCologne from '../assets/images/products/sea-cologne.webp';
-import afterShave from '../assets/images/products/after-shave.webp';
-import anchorPomade from '../assets/images/products/anchor-pomade.webp';
-import beardBalm from '../assets/images/products/beard-balm.webp';
-import faceWash from '../assets/images/products/face-wash.webp';
-import faceLotion from '../assets/images/products/face-lotion.webp';
-import handBalm from '../assets/images/products/hand-balm.webp';
-import hotShave from '../assets/images/products/hot-shave.webp';
-import tacticalPouch from '../assets/images/products/tactical-pouch.webp';
-import survivalHatchet from '../assets/images/products/survival-hatchet.webp';
+import d20Pin from '../assets/images/products/d20-pins.jpg';
+import cutthroatCuties from '../assets/images/products/cutthroatcuties.png';
+import ghibliSnacks from '../assets/images/products/ghiblisnacks.png';
+import pokemonPuff from '../assets/images/products/pokemonpuff.png';
+import northernPin from '../assets/images/products/northernpin.png';
+import charteredGame from '../assets/images/products/charteredgame.jpg';
+import huntMaster from '../assets/images/products/huntmaster.jpg';
+import hootGame from '../assets/images/products/hootgame.png';
+import arcaneAlley from '../assets/images/products/arcanealley.png';
+import filibusterGame from '../assets/images/products/filibuster.png';
+import makerPhone from '../assets/images/products/makerphone.jpg';
+import gameduino from '../assets/images/products/gameduino.jpeg';
+import audxSpeakers from '../assets/images/products/audx.webp';
+import codrone from '../assets/images/products/codrone.jpg';
+import qdeeRobot from '../assets/images/products/qdeerobot.jpg';
+import duskriderComic from '../assets/images/products/duskrider.jpg';
+import overlordComic from '../assets/images/products/overlord.jpg';
+import draculagateComic from '../assets/images/products/draculagate.jpg';
+import arthurFrostComic from '../assets/images/products/arthurblackfrost.png';
+import spookyGirlsComic from '../assets/images/products/spookygirls.jpg';
 
 const INITIAL_STATE = {
   data: [],
   items: [
     {
-      img: bourbonSoap,
-      title: 'Big American Bourbon Soap',
-      price: 9.5,
-      description: `In the early days of the American Frontier, rugged pioneers indulged with a dry buffalo steak and a pull of whiskey, not $12 appletini and plate of bruschetta. Duke Cannon honors that independent, pioneering spirit by partnering with Buffalo Trace Distillery to add their award-winning Kentucky Straight Bourbon Whiskey to this Big American Bourbon Soap. Weighing in at a full 10 oz., this large, American-made soap has a rich, oak barrel scent that smells as good as bourbon tastes.`,
-      quantity: 0
+      img: d20Pin,
+      title: 'D-20 Enamel Pin',
+      price: 12,
+      description: `D20 Hard Enamel Pins inspired by classes from Dungeons & Dragons, and other tabletop RPGs.`,
+      quantity: 0,
+      category: `Pins`,
     },
     {
-      img: leafSoap,
-      title: 'Big Ass Brick Of Soap - Leaf and Leather',
-      price: 9,
-      description: `Duke Cannon would rather explore the Great Plains on horseback than navigate the parking lot of an outlet mall in a compact car. It's in the Great Wide Open, about 1000 miles from the nearest food court, where a light breeze carries the scent of old leather mixed with fresh rolled tobacco leaves. Take a trip back in time when a nice, masculine scent didn't involve citrus fruits or flowers, and experience this American-made soap inspired by leaf and leather.`,
-      quantity: 0
+      img: cutthroatCuties,
+      title: 'Cutthroat Cuties',
+      price: 12,
+      description: `Sailor Senshi enamel pins with the stylings of Americana traditional tattoos`,
+      quantity: 0,
+      category: `Pins`,
     },
     {
-      img: pineSoap,
-      title: 'Big Ass Brick Of Soap - Fresh Cut Pine',
-      price: 9,
-      description: `Duke Cannon does not require the rich aroma of a $7 cappuccino to get him going in the morning, and he doesn't need comfy fashion boots to stay "cozy." Instead, Duke Cannon finds inspiration and warmth in hard work, like a morning spent chopping wood in the solitude of a pine forest. Experience the invigorating scent of fresh split pine and celebrate a return to basics with this American made soap inspired by the lush green wilderness of the Pacific Northwest.`,
-      quantity: 0
+      img: ghibliSnacks,
+      title: 'Ghibli Snacks',
+      price: 13,
+      description: `Hard enamel pins of your favorite Ghibli movie characters eating snacks.`,
+      quantity: 0,
+      category: `Pins`,
     },
     {
-      img: victorySoap,
-      title: 'Limited Edition WWII-Era Big Ass Brick Of Soap - Victory',
-      price: 9,
-      description: `The Big Ass Brick of Soap from Duke Cannon is designed to meet the high standards of hard working men who want to get clean and smell good without using shower gels and accessories. True to its name, our soap is big (10 oz.) and will last much longer than the dainty little bars in your local grocery. It also smells awesome (clean, fresh scent with a hint of grass) and contains steel cut grains for maximum gripability. If you enjoy activities like drinking American beer or using power tools, then frankly, this is the only soap meant for you.`,
-      quantity: 0
+      img: pokemonPuff,
+      title: 'Pokemon PokePuff',
+      price: 13,
+      description: `Hard enamel pins of your favorite Pokemon reimagined as creampuffs`,
+      quantity: 0,
+      category: `Pins`,
     },
     {
-      img: airCologne,
-      title: 'Solid Cologne - Air',
+      img: northernPin,
+      title: 'Northern Spell',
+      price: 13,
+      description: `Northern Spell's Sleepy and Adorable Pin Collection`,
+      quantity: 0,
+      category: `Pins`,
+    },
+    {
+      img: charteredGame,
+      title: 'Chartered Game',
+      price: 40,
+      description: `Chartered: The Golden Age - Build and buy your way to becoming Amsterdam's wealthiest merchant in this easy to learn boardgame.`,
+      quantity: 0,
+      category: `board-games`,
+    },
+    {
+      img: huntMaster,
+      title: 'Hunt Master',
+      price: 20,
+      description: `Players travel to creepy locations and hunt for creatures of the night to assist them in defeating their opponents. Their goal is to locate five monsters of a specific monster-type (Cryptid, Undead, Paranormal or Humanoid) before their opponents assemble their legion of monsters.`,
+      quantity: 0,
+      category: `board-games`,
+    },
+    {
+      img: arcaneAlley,
+      title: 'Arcane Alley',
+      price: 20,
+      description: `Each player is a wizard merchant, peddling enchanted curiosities to the most curious enchanters. Outsell, outsmart, and outlast the other players with help from the magical items in your storehouse, but don’t get caught by the inspectors.`,
+      quantity: 0,
+      category: `board-games`,
+    },
+    {
+      img: hootGame,
+      title: 'Hoot',
       price: 25,
-      description: `The open skies scent is very subtle and certainly a crowd pleaser. The fragrance is crisp and light and smells like fresh mountain air after the rain, not like your grandma's living room.`,
-      quantity: 0
+      description: `Hoot is a brand new party game that brings out your witty side. The rules are pretty easy: create phrases from random strings of letters.`,
+      quantity: 0,
+      category: `board-games`,
     },
     {
-      img: bourbonCologne,
-      title: 'Solid Cologne - Bourbon',
+      img: filibusterGame,
+      title: 'Filibuster!',
       price: 25,
-      description: `The Bourbon Solid Cologne offers a woodsy, oak barrel scent inspired by the rackhouses at our favorite place in the world, the Buffalo Trace Distillery. If you've had the distinct pleasure of smelling our Big American Bourbon Soap, then you'll probably want this.`,
-      quantity: 0
+      description: `A fast paced, semi-cooperative political party game for 3-5 players.`,
+      quantity: 0,
+      category: `board-games`
     },
     {
-      img: landCologne,
-      title: 'Solid Cologne - Land',
-      price: 25,
-      description: `The Redwood scent is masculine and warm containing hints of sandalwood, amber, citrus, rosemary, and clove. Smells like a walk through the Great Northwest, not a high school dance.`,
-      quantity: 0
+      img: makerPhone,
+      title: 'Maker Phone',
+      price: 100,
+      description: `MAKERphone is an educational DIY mobile phone designed to bring electronics and programming to the crowd in a fun and interesting way.`,
+      quantity: 0,
+      category: `diy-tech`
     },
     {
-      img: seaCologne,
-      title: 'Solid Cologne - Sea',
-      price: 25,
-      description: `The Naval Supremacy scent is a light, fresh water fragrance that with subtle notes of citrus. If you love the scent of our Naval Supremacy soap, then stop reading and add this to your cart.`,
-      quantity: 0
-    },
-    {
-      img: hotShave,
-      title: 'Hot Shave Clear Warming Shave Gel',
+      img: gameduino,
+      title: 'Gameduino: an Arduino game adapter',
       price: 15,
-      description: `Master barbers know that the perfect shave starts with a little heat. Duke Cannon’s Hot Shave is a clear shaving gel with a unique warming sensation that helps deliver the closest possible shave. Simply apply a small amount with warm water and wait 20-30 seconds before shaving to activate the heat. This opens the pores, softens and lubricates the skin for precise, comfortable blade strokes. Upon completion, cool down with a splash of cold water and apply After-Shave balm to close the pores and hydrate skin.`,
-      quantity: 0
+      description: `Gameduino connects your Arduino to a VGA monitor and speakers, so anyone who can write an Arduino sketch can create video games. It's packed full of 8-bit game goodness: hundreds of sprites, smooth scrolling, multi-channel stereo sound.`,
+      quantity: 0,
+      category: `diy-tech`
     },
     {
-      img: afterShave,
-      title: 'Cooling After-Shave Balm',
+      img: audxSpeakers,
+      title: 'Audx DIY Speakers',
       price: 15,
-      description: `Any time a man wipes sharpened steel across his face, there is bound to be some damage. Find relief from that scorched earth feeling by going from hot to cold with Duke Cannon's After-Shave Balm. Made with menthol, it provides an extremely unique cooling effect that helps close the pores and provide instant comfort. Superior grade ingredients like aloe, shea butter, and allantoin provide hydration while minimizing razor burn irritation, and a light sandalwood fragrance leaves you feeling and smelling your handsome best. Free of alcohol, parabens, sulfates, and anything you don't want.`,
-      quantity: 0
+      description: `Build your speaker and create your own music visualiser whilst learning about coding.`,
+      quantity: 0,
+      category: `diy-tech`
     },
     {
-      img: anchorPomade,
-      title: 'News Anchor Pomade',
+      img: codrone,
+      title: `CoDrone`,
+      price: 50,
+      description: `A drone you can easily program to do whatever you want: follow you, engage in laser battles, go through a maze and more.`,
+      quantity: 0,
+      category: `diy-tech`
+    },
+    {
+      img: qdeeRobot,
+      title: 'Qdee Robot',
+      price: 100,
+      description: `Qdee is a Robot Kit designed to teach kids everything about the robot. With Qdee, Kids can utilize micro:bit to fully realize their ideas and truly unlock their imagination.`,
+      quantity: 0,
+      category: `diy-tech`
+    },
+    {
+      img: duskriderComic,
+      title: 'Duskrider',
       price: 15,
-      description: `Your dad never talked to you about hair styling, but be damn sure he used a decent pomade. After all, a man’s hair is a weapon and no hair commands more respect than that of a News Anchor. Duke Cannon’s News Anchor Pomade works on all hair types, delivering a natural matte finish to provide a classic, camera-ready look. Offers a medium-to-strong hold and a protein blend that strengthens and repairs your hard-working crown. Features the light scent of classic sandalwood with a hint of citrus. Prepare your hair for award-winning, 'round the clock coverage with Duke Cannon’s News Anchor Pomade.`,
-      quantity: 0
+      description: `A new social phenomenon is revolutionizing human life on Zarmina. People now have the opportunity to transfer their consciousness to a new body: a synthetic host. The synthetic host doesn’t age. It doesn’t need food, get sick or develop cancer. Transferring essentially means immortality. The process, however, is irreversible.`,
+      quantity: 0,
+      category: `graphic-novel`
     },
     {
-      img: beardBalm,
-      title: 'Best Damn Beard Balm',
+      img: overlordComic,
+      title: 'Overlord',
       price: 15,
-      description: `While a well manicured beard is a symbol of power and prestige, an unruly and disheveled beard has the potential to lead society into complete anarchy. Do your duty and maintain your beard with Duke Cannon's Best Damn Beard Balm. Made with superior grade ingredients like lanolin and cocoa butter, our Beard Balm helps moisturize and protect a man's beard and the face underneath it. With a pleasant, woodsy fragrance, and packaged in a premium travel tin, it's like a portable Redwood forest in your pocket.`,
-      quantity: 0
+      description: `The story follows the adventure of Kit Thornwood, the town's cynical secret magic user as, in the space of one day, he punches the mayor in the face, messes up confessing his feelings for his best friend and number one town hero Ivor Adaliad, and runs away to accidentally become the master of a horde of evil minions and an ominously dark tower.`,
+      quantity: 0,
+      category: `graphic-novel`
     },
     {
-      img: handBalm,
-      title: 'Bloody Knuckles Hand Repair Balm',
-      price: 15,
-      description: `Dry, cracked hands are like living testaments to a man's hard work and ingenuity. And while hard working hands are to be celebrated, let's be honest; dry, cracked hands feel awful. That's why Duke Cannon introduced Bloody Knuckles Hand Repair Balm. Made with lanolin, it provides much-needed moisture without leaving the hands feeling sticky or greasy (like that stuff in the green jar.)`,
-      quantity: 0
+      img: draculagateComic,
+      title: 'Draculagate',
+      price: 20,
+      description: `When Dracula's nephew kills a Canadian TV star, it sparks an international incident that may lead to war between Canada and the isolationist land of monsters. The United States attempts to broker peace, but the State Department is greatly lacking in staff and expertise. They're the first Americans in decades to cross into monster civilization, and they are going to do very, very poorly.`,
+      quantity: 0,
+      category: `graphic-novel`
     },
     {
-      img: faceWash,
-      title: `Working Man's Face Wash`,
-      price: 14,
-      description: `While you're hard at work, dirt and grime flock to your face like hipsters to a vegan coffee shop with free wi-fi. That's why Duke Cannon created a face wash that works as hard as you do. Formulated to ward off the effects of double shifts, blistering winds, and bacon grease, it has a refreshing citrus scent and a little grit for optimal cleansing.`,
-      quantity: 0
+      img: arthurFrostComic,
+      title: 'Arthur Frost',
+      price: 20,
+      description: `After his father abandons his family, a young fisherman named Arthur inherits a curse that has plagued his bloodline for generations.`,
+      quantity: 0,
+      category: `graphic-novel`
     },
     {
-      img: faceLotion,
-      title: 'Standard Issue Face Lotion',
-      price: 15,
-      description: `Every day, dirt, grease, and the elements wage a silent war on your mug, making it hard for you to put your best face forward. Hard-working folks don't have time to obsess over a fancy skin care regimen; you need a simple and straightforward defense. Standard Issue Face Lotion from Duke Cannon is formulated to provide instant, long lasting hydration while reducing excess oil and shine. It goes on smooth and lightweight without leaving a greasy residue. Fragrance free so your face doesn't smell like strawberries.`,
-      quantity: 0
-    },
-    {
-      img: tacticalPouch,
-      title: 'Tactical Soap On A Rope Pouch',
-      price: 15,
-      description: `This U.S. military-grade tactical soap pouch should be standard-issue for every shower. To maximize hygiene in tactical situations, this equipment is engineered with a coarse mesh to scrub your hands and feet, and a softer mesh for less rough areas. The 550-mil-spec paracord keeps your large soap off the ground. Perfect for home, outdoor, field, or prison showers.`,
-      quantity: 0
-    },
-    {
-      img: survivalHatchet,
-      title: 'The Duke Cannon Survivalist Hatchet',
-      price: 135,
-      description: `Whether hunting, camping, chomping wood, or killing zombies, the Duke Cannon Survivalist Hatchet has you covered. A collaboration with our friends at Hardcore Hammers, this hatchet is 100% hand-crafted in USA. The perfect gift for the outdoorsman or Rick Grimes of the family.`,
-      quantity: 0
-    }
+      img: spookyGirlsComic,
+      title: 'Spooky Girls',
+      price: 20,
+      description: `A full-color graphic novel made up of 4 new monster comics: Jenny the Werecat, Vicky Slime, Punk Teen Demon Queen, & Tarantula Twins.`,
+      quantity: 0,
+      category: `graphic-novel`
+    },    
   ],
-  cart: []
+  cart: [],
+  initialCount: 0,
 };
 
 export const configuration = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case ADD_ITEM:
       action.item.quantity = action.item.quantity + 1;
-      const add = state.cart.filter(item => item.title !== action.item.title);
+
+      const add =
+        state.cart.indexOf(action.item) !== -1
+          ? state.cart.map(item =>
+              item.title === action.item.title ? (item = action.item) : item
+            )
+          : [...state.cart, action.item];
+
+      const addCount = add.map(item => item.quantity).reduce((a,v) => a + v);
+
 
       return {
         ...state,
-        cart: [...add, action.item]
+        itemCount: addCount,
+        cart: [...add]
       };
+
     case REMOVE_ITEM:
       action.item.quantity = action.item.quantity - 1;
-      const remove = state.cart.filter(
-        item => item.title !== action.item.title
-      );
+
+      const remove = state.cart
+        .map(item =>
+          item.title === action.item.title ? (item = action.item) : item
+        )
+        .filter(item => item.quantity > 0);
+
+        const removeCount = remove.length > 0 ? remove.map(item => item.quantity).reduce((a, v) => a + v) : 0;
 
       return {
         ...state,
-        cart: [...remove, action.item].filter(item => item.quantity > 0)
+        itemCount: removeCount,
+        cart: [...remove]
       };
     default:
       return state;

@@ -9,7 +9,7 @@ import Shop from './Shop';
 import Cart from './Cart';
 import Loader from './Loader';
 
-const App = ({ data, items, cart, add, remove }) => (
+const App = ({ data, items, cart, add, remove, itemCount }) => (
   <main>
     <Router>
       <div className="App">
@@ -25,7 +25,7 @@ const App = ({ data, items, cart, add, remove }) => (
               <Link to="/shop">Shop</Link>
             </li>
             <li>
-              <Link to="/cart">Cart</Link>
+              <Link to="/cart">Cart</Link> ( { itemCount } )
             </li>
           </ul>
         </nav>
@@ -44,7 +44,8 @@ const App = ({ data, items, cart, add, remove }) => (
 const mapStateToProps = state => ({
   data: state.configuration.data,
   cart: state.configuration.cart,
-  items: state.configuration.items
+  items: state.configuration.items,
+  itemCount: state.configuration.itemCount,
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
