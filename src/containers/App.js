@@ -29,11 +29,11 @@ const App = ({ data, items, cart, add, remove, itemCount }) => (
             </li>
           </ul>
         </nav>
-        <Route exact path="/" render={() => <Home items={items} data={data} />} />
+        <Route exact path="/" render={() => <Home items={items} data={data} add={add} />} />
         <Route path="/shop" render={() => <Shop items={items} add={add} />} />
         <Route
           path="/cart"
-          render={() => <Cart cart={cart} remove={remove} />}
+          render={() => <Cart cart={cart} remove={remove} add={add} />}
         />
       </div>
     </Router>

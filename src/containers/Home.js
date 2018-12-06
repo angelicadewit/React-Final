@@ -6,7 +6,7 @@ class Home extends Component {
   
 
   render() {
-    const { items, data } = this.props;
+    const { items, data, add } = this.props;
     console.log(data.h1)
     return (
 
@@ -14,7 +14,7 @@ class Home extends Component {
       <div className="cart-item">
           <h1>{data.h1}</h1>
           {items.map((item, index) => {
-            if (item.special === "hot") return <Product key={index} item={item}/>;
+            if (item.special === "hot") return <Product key={index} item={item} add={add}/>;
             return false;
           })}
       </div>
@@ -27,6 +27,7 @@ class Home extends Component {
 Home.propTypes = {
   items: PropTypes.array,
   data: PropTypes.object,
+  add: PropTypes.func,
 };
 
 export default Home;

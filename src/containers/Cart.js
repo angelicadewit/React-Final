@@ -12,13 +12,41 @@ class Cart extends Component {
       return total;
     });
 
+    const shipping20 = total + 7.05;
+    const shipping40 = total + 12.85;
+
     return (
       <div className="cart">
-        {cart.map((item, index) => {
-          // if(cart.length < 0)
-          return <CartItem key={index} item={item} remove={remove} />;
-        })}
-        <h3>Total: ${total.toFixed(2)}</h3>
+        {cart.length === 0 ? (
+          <h1>Cart is empty</h1>
+        ) : (
+          <div>
+
+
+            {total > 20 && total < 40 ? (
+              <div>
+                {cart.map((item, index) => <CartItem key={index} item={item} remove={remove} />)}
+                <h3>Subtotal: ${total.toFixed(2)}</h3>
+                <h3>Shipping: $12.85</h3>
+                <h3>Total: ${shipping40.toFixed(2)}</h3>
+              </div>
+            ) : total > 40 ? (
+              <div>
+                {cart.map((item, index) => <CartItem key={index} item={item} remove={remove} />)}
+                <h3>Subtotal: ${total.toFixed(2)}</h3>
+                <h3>Shipping: FREE</h3>
+                <h3>Total: ${total.toFixed(2)}</h3>
+              </div>
+            ) : (
+              <div>
+                {cart.map((item, index) => <CartItem key={index} item={item} remove={remove} />)}
+                <h3>Subtotal: ${total.toFixed(2)}</h3>
+                <h3>Shipping: $7.05</h3>
+                <h3>Total: ${shipping20.toFixed(2)}</h3>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     );
 

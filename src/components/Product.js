@@ -18,7 +18,7 @@ class Product extends Component {
       delay: 0.25, 
       ease: Expo.easeIn, 
       onComplete: () => { 
-        this.setState({ disabled: !this.state.diabled});
+        this.setState({ disabled: !this.state.disabled});
     },
   });
 
@@ -26,9 +26,9 @@ class Product extends Component {
   }
 
   render() {
-    const {disabled} = this.state;
+    const { disabled } = this.state;
     const { item, add } = this.props;
-    console.log("got item out of props", this.props);
+    // console.log("got item out of props", this.props);
     const tooltip = item.title.replace(/\s/g, '');
     
     return (
