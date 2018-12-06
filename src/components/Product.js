@@ -28,6 +28,7 @@ class Product extends Component {
   render() {
     const {disabled} = this.state;
     const { item, add } = this.props;
+    console.log("got item out of props", this.props);
     const tooltip = item.title.replace(/\s/g, '');
     
     return (

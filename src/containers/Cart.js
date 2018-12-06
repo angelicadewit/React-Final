@@ -15,11 +15,14 @@ class Cart extends Component {
     return (
       <div className="cart">
         {cart.map((item, index) => {
+          // if(cart.length < 0)
           return <CartItem key={index} item={item} remove={remove} />;
         })}
         <h3>Total: ${total.toFixed(2)}</h3>
       </div>
     );
+
+    // return <h1>Nothing has been added</h1>
   }
 }
 

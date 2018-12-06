@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Bounce, Expo, TimelineMax } from 'gsap/TweenMax';
 
-import image from '../assets/images/gingerbread.png';
+import image from '../assets/images/robot.png';
 
 class Home extends Component {
   componentDidMount() {

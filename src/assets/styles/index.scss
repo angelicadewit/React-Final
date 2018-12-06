@@ -1,9 +1,15 @@
+$green: #FA6900;
+$offwhite: #E0E4CC;
+$tan: #A7DBD8;
+$white: #AEDDEC;
+
 body, html {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   font-family: sans-serif;
+  background-color: $offwhite;
 
   #root {
     position: relative;
@@ -17,10 +23,6 @@ body, html {
   }
 }
 
-$green: #374412;
-$offwhite: #fcfcfc;
-$tan: #bcb2a2;
-$white: #fff;
 
 $roboto: 'Roboto Condensed', Sans-Serif;
 $cabin: 'Cabin', Sans-Serif;

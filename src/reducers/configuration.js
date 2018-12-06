@@ -22,7 +22,10 @@ import arthurFrostComic from '../assets/images/products/arthurblackfrost.png';
 import spookyGirlsComic from '../assets/images/products/spookygirls.jpg';
 
 const INITIAL_STATE = {
-  data: [],
+  data: {
+      h1: `Welcome to Geek Starter`,
+      About: `Missed a kickstarter campaign? We've got you covered.`,
+  },
   items: [
     {
       img: d20Pin,
@@ -31,6 +34,7 @@ const INITIAL_STATE = {
       description: `D20 Hard Enamel Pins inspired by classes from Dungeons & Dragons, and other tabletop RPGs.`,
       quantity: 0,
       category: `Pins`,
+      special: `hot`,
     },
     {
       img: cutthroatCuties,
@@ -95,6 +99,7 @@ const INITIAL_STATE = {
       description: `Hoot is a brand new party game that brings out your witty side. The rules are pretty easy: create phrases from random strings of letters.`,
       quantity: 0,
       category: `board-games`,
+      special: `hot`,
     },
     {
       img: filibusterGame,
@@ -142,7 +147,8 @@ const INITIAL_STATE = {
       price: 100,
       description: `Qdee is a Robot Kit designed to teach kids everything about the robot. With Qdee, Kids can utilize micro:bit to fully realize their ideas and truly unlock their imagination.`,
       quantity: 0,
-      category: `diy-tech`
+      category: `diy-tech`,
+      special: `hot`,
     },
     {
       img: duskriderComic,
@@ -166,7 +172,8 @@ const INITIAL_STATE = {
       price: 20,
       description: `When Dracula's nephew kills a Canadian TV star, it sparks an international incident that may lead to war between Canada and the isolationist land of monsters. The United States attempts to broker peace, but the State Department is greatly lacking in staff and expertise. They're the first Americans in decades to cross into monster civilization, and they are going to do very, very poorly.`,
       quantity: 0,
-      category: `graphic-novel`
+      category: `graphic-novel`,
+      special: `hot`,
     },
     {
       img: arthurFrostComic,
@@ -186,7 +193,8 @@ const INITIAL_STATE = {
     },    
   ],
   cart: [],
-  initialCount: 0,
+  itemCount: 0,
+
 };
 
 export const configuration = (state = INITIAL_STATE, action) => {
