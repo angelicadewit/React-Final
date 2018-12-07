@@ -1,6 +1,6 @@
 import { ADD_ITEM, REMOVE_ITEM } from '../actions';
 
-import d20Pin from '../assets/images/products/d20-pins.jpg';
+import d20Pin from '../assets/images/products/d20-pins.png';
 import cutthroatCuties from '../assets/images/products/cutthroatcuties.png';
 import ghibliSnacks from '../assets/images/products/ghiblisnacks.png';
 import pokemonPuff from '../assets/images/products/pokemonpuff.png';

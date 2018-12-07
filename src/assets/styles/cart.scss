@@ -101,4 +101,33 @@
       }
     };
   }
+
+  .payment{
+    background-color: $green;
+    border: 0;
+    cursor: pointer;
+    font: $roboto;
+    margin-top: 35px;
+    outline: 0;
+    padding: 10px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+
+    a{
+      font: $roboto;
+      color: $tan;
+      font-size: 18px;
+      font-weight: 400;
+      outline: 0;
+      padding: 10px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  }
+
+  .cart-header{
+    text-transform: uppercase;
+    text-decoration: underline overline $green;
+    font-family: $serif;
+  }
 }

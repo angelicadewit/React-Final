@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Product from '../components/Product';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
 
 class Home extends Component {
   
@@ -19,16 +19,16 @@ class Home extends Component {
           </div>
         </Link>
 
-        <h2>{data.hot}</h2>  
-        <div class="home-items">
+        <h2 className="special-products">{data.hot}</h2>  
+        <div className="home-items">
           {items.map((item, index) => {
               if (item.special === "hot") return <Product key={index} item={item} add={add}/>;
               return false;
           })} 
         </div>
 
-        <h2>{data.new}</h2>
-        <div class="home-items">
+        <h2 className="special-products">{data.new}</h2>
+        <div className="home-items new">
 
           {items.map((item, index) => {
               if (item.special === "new") return <Product key={index} item={item} add={add}/>;

@@ -18,15 +18,16 @@
     
     @media (min-width: 900px) {
         display: flex;
-        flex-wrap: wrap;
         width: 90%;
         margin: auto;
-
-
         .product{
-        
             margin-bottom: 20px;
-    
         }
     }
+}
+
+.special-products{
+    text-transform: uppercase;
+    text-decoration: underline overline $green;
+    font-family: $serif;
 }
