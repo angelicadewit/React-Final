@@ -23,7 +23,7 @@ import spookyGirlsComic from '../assets/images/products/spookygirls.jpg';
 
 const INITIAL_STATE = {
   data: {
-      h1: `Welcome to Geek Starter`,
+      h1: `Welcome to Brick and Mordor Hobby Store`,
       About: `Missed a kickstarter campaign? We've got you covered.`,
   },
   items: [

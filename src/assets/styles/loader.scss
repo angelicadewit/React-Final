@@ -2,7 +2,7 @@
   @include l-flex();
   @include l-center();
   @include l-center-justified();
-  background-color: $offwhite;
+  background-color: black;
   box-sizing: border-box;
   height: 100%;
   position: fixed;
@@ -13,6 +13,7 @@
   img {
     width: 100%;
     max-width: 783px;
-    transform: rotate(-15deg);
+    
+    // transform: rotate(-15deg);
   }
 }
