@@ -20,11 +20,14 @@ import overlordComic from '../assets/images/products/overlord.jpg';
 import draculagateComic from '../assets/images/products/draculagate.jpg';
 import arthurFrostComic from '../assets/images/products/arthurblackfrost.png';
 import spookyGirlsComic from '../assets/images/products/spookygirls.jpg';
+import heroImage from '../assets/images/products/gameduinohero.jpeg';
 
 const INITIAL_STATE = {
   data: {
-      h1: `Welcome to Brick and Mordor Hobby Store`,
-      About: `Missed a kickstarter campaign? We've got you covered.`,
+      heroImage: heroImage,
+      productName: 'Gameduino',
+      hot: `Hot Items`,
+      new: `New Arrivals`,
   },
   items: [
     {
@@ -34,7 +37,6 @@ const INITIAL_STATE = {
       description: `D20 Hard Enamel Pins inspired by classes from Dungeons & Dragons, and other tabletop RPGs.`,
       quantity: 0,
       category: `Pins`,
-      special: `hot`,
     },
     {
       img: cutthroatCuties,
@@ -43,6 +45,7 @@ const INITIAL_STATE = {
       description: `Sailor Senshi enamel pins with the stylings of Americana traditional tattoos`,
       quantity: 0,
       category: `Pins`,
+      special: `hot`,
     },
     {
       img: ghibliSnacks,
@@ -99,7 +102,7 @@ const INITIAL_STATE = {
       description: `Hoot is a brand new party game that brings out your witty side. The rules are pretty easy: create phrases from random strings of letters.`,
       quantity: 0,
       category: `board-games`,
-      special: `hot`,
+      special: `new`,
     },
     {
       img: filibusterGame,
@@ -139,7 +142,8 @@ const INITIAL_STATE = {
       price: 50,
       description: `A drone you can easily program to do whatever you want: follow you, engage in laser battles, go through a maze and more.`,
       quantity: 0,
-      category: `diy-tech`
+      category: `diy-tech`,
+      special: `hot`,
     },
     {
       img: qdeeRobot,
@@ -148,7 +152,7 @@ const INITIAL_STATE = {
       description: `Qdee is a Robot Kit designed to teach kids everything about the robot. With Qdee, Kids can utilize micro:bit to fully realize their ideas and truly unlock their imagination.`,
       quantity: 0,
       category: `diy-tech`,
-      special: `hot`,
+      
     },
     {
       img: duskriderComic,
@@ -173,7 +177,7 @@ const INITIAL_STATE = {
       description: `When Dracula's nephew kills a Canadian TV star, it sparks an international incident that may lead to war between Canada and the isolationist land of monsters. The United States attempts to broker peace, but the State Department is greatly lacking in staff and expertise. They're the first Americans in decades to cross into monster civilization, and they are going to do very, very poorly.`,
       quantity: 0,
       category: `graphic-novel`,
-      special: `hot`,
+      special: `new`,
     },
     {
       img: arthurFrostComic,

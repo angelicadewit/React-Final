@@ -1,0 +1,32 @@
+.hero-image{
+    width: 100%;
+    margin-bottom: 30px;
+    
+
+    img{
+        border-bottom: 8px solid $green;
+        border-top: 8px solid $green;
+        width: 100vw;
+
+        @media (min-width: 900px) {
+            width: 80vw;
+        }
+    }
+}
+
+.home-items{
+    
+    @media (min-width: 900px) {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+
+
+        .product{
+        
+            margin-bottom: 20px;
+    
+        }
+    }
+}
