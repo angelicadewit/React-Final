@@ -42,7 +42,7 @@ class Shop extends Component {
           </span>{' '}
           |{' '}
           <span className="category-link" onClick={() => this.filterCategory('diy-tech')}>
-            DIY tech
+            DIY Tech
           </span>{' '}
           |{' '}
           <span className="category-link" onClick={() => this.filterCategory('graphic-novel')}>

@@ -11,7 +11,7 @@ import Loader from './Loader';
 
 const App = ({ data, items, cart, add, remove, itemCount }) => (
   <main>
-    <Router>
+    <Router basename={'/'}>
       <div className="App">
         <header className="App-header">
           <img src={logo} className="logo" alt="Duke Cannon" />
@@ -19,22 +19,19 @@ const App = ({ data, items, cart, add, remove, itemCount }) => (
         <nav className="App-nav">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
             </li>
             <li>
-              <Link to="/shop">Shop</Link>
+              <Link to={`${process.env.PUBLIC_URL}/shop`}>Shop</Link>
             </li>
             <li>
-              <Link to="/cart">Cart</Link> ( { itemCount } )
+              <Link to={`${process.env.PUBLIC_URL}/cart`}>Cart</Link> ( { itemCount } )
             </li>
           </ul>
         </nav>
-        <Route exact path="/" render={() => <Home items={items} data={data} add={add} />} />
-        <Route path="/shop" render={() => <Shop items={items} add={add} />} />
-        <Route
-          path="/cart"
-          render={() => <Cart cart={cart} remove={remove} add={add} />}
-        />
+          <Route exact path={`${process.env.PUBLIC_URL}/`} render={() => <Home items={items} data={data} add={add} />} />
+          <Route path={`${process.env.PUBLIC_URL}/shop`} render={() => <Shop items={items} add={add} />} />
+          <Route path={`${process.env.PUBLIC_URL}/cart`} render={() => <Cart cart={cart} remove={remove} />} />
       </div>
     </Router>
     <Loader />
